@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Créer une annonce</h1>
+
+  <%= simple_form_for [:owner, @camping_car] do |f| %>
+    <%= f.input :title %>
+    <%= f.input :category %>
+    <%= f.input :description %>
+    <%= f.input :brand %>
+    <%= f.input :sleeps_capacity %>
+    <%= f.input :price_per_day %>
+    <%= f.input :location %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+
+  <% end %>
+
+</div>
