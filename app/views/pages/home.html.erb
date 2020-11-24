@@ -1,2 +1,26 @@
-<h1>Camping car and B</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-page">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner.png" %>);">
+    <div class="container">
+      <h1>Voyagez où vous souhaitez</h1>
+      <p>Votre nouveau chez vous, ailleurs</p>
+      <%= link_to "En savoir plus", "#", class: "btn btn-flat" %>
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="text-separator">
+    <h2>Location de camping-cars en France</h2>
+  </div>
+  <div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "van.png" %>)">
+      Van
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "integral.png" %>)">
+      Intégral
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "profile.png" %>)">
+      Profilé
+    </div>
+  </div>
+</div>
