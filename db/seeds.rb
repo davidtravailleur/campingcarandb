@@ -11,8 +11,7 @@ puts "Cleaning database..."
 Booking.destroy_all
 
 puts "Cleaning database..."
-CampingCar.destroy_all
-
+CampingCar.destroy_al
 puts "Cleaning database..."
 User.destroy_all
 
