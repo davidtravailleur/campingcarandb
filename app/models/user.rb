@@ -7,5 +7,9 @@ class User < ApplicationRecord
   has_many :camping_cars
   has_many :reservations, through: :camping_cars, source: :bookings #as owner
   has_many :bookings #as renter
+
   has_one_attached :avatar
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 end
