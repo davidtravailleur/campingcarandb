@@ -1,0 +1,92 @@
+.owner-banner {
+  // background-size: cover;
+  background-color: $cambridge-blue;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.owner-banner h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.owner-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.owner-card > img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.owner-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.owner-card a {
+  align-items: right;
+  color: $midnight-green;
+}
+.owner-card p {
+  font-size: 16px;
+  opacity: .7;
+  margin: 0;
+  max-height: 200px;
+}
+
+.owner-card .owner-card-infos {
+  padding: 16px;
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  align-items: start-end;
+  position: relative;
+}
+
+.owner-card-infos .owner-card-user {
+  position: absolute;
+  right: 16px;
+  top: 100px;
+  width: 40%;
+}
+
+.owner-card-description {
+  padding-left: 10px;
+  margin-bottom: 10px
+}
+
+.owner-card-price p {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  width: 100%;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

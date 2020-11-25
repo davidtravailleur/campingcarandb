@@ -8,10 +8,14 @@ class Owner::CampingCarsController < ApplicationController
     @camping_car = CampingCar.new(camping_car_params)
     @camping_car.user = current_user
     if @camping_car.save
-      redirect_to owner_camping_cars_path(@camping_car)
+      redirect_to owner_camping_cars_path
     else
       render :new
     end
+  end
+
+  def index
+    @camping_cars = current_user.camping_cars
   end
 
   private

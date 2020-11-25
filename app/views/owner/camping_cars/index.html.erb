@@ -1,0 +1,37 @@
+<div class="owner-banner">
+  <h1>Mes annonces</h1>
+</div>
+<div class="container">
+  <div class="row">
+  <% @camping_cars.each do |camping_car| %>
+    <div class="col-6 mt-5 mb-5">
+      <div class="owner-card">
+          <% if camping_car.photo.present? %>
+            <%= cl_image_tag camping_car.photo.key, height: 300, width: 345, crop: :fill %>
+          <% else %>
+            <%= image_tag 'placeholder.png', height: 300, width: 345 %>
+          <% end %>
+
+        <div class="owner-card-infos">
+          <div>
+            <h4><%= camping_car.brand %></h4>
+            <h2><%= camping_car.title %></h2>
+            <p><%= camping_car.sleeps_capacity%> couchages</p>
+          </div>
+          <div>
+              <a href="#"><i class="far fa-edit"></i></a>
+              <a href=""><i class="fas fa-trash"></i></a>
+          </div>
+        </div>
+        <div class="owner-card-description">
+          <p><%= camping_car.description %> </p>
+        </div>
+        <div class="owner-card-price">
+          <p><%= camping_car.price_per_day%>€/jour</p>
+        </div>
+      </div>
+    </div>
+      <% end %>
+  </div>
+
+</div>
