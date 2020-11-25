@@ -1,4 +1,5 @@
 class CampingCarsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
   def index
     @camping_cars = CampingCar.all
     if params[:city]
@@ -10,8 +11,6 @@ class CampingCarsController < ApplicationController
   def show
     @camping_car = CampingCar.find(params[:id])
   end
-
-
 
   private
 
