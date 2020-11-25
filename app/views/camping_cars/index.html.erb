@@ -1,0 +1,56 @@
+
+<section class="search-container">
+    <div class="form-container">
+        <form action="/camping_cars" method="get" novalidate="novalidate">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                            <input name="city" type="text" class="form-control search-slt" placeholder="Entrez votre ville">
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                            <input type="date" label="Date de départ" class="form-control search-slt" placeholder="Enter Drop City">
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                            <input type="date" label="Date de départ" class="form-control search-slt" placeholder="Enter Drop City">
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                            <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                <option>Catégorie</option>
+                                <option>Van</option>
+                                <option>Intégral</option>
+                                <option>Profilé</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                            <button type="submit" class="searchformbutton btn btn-success wrn-btn">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<div class="card-container row row-cols-1 row-cols-md-4">
+<% @camping_cars.each do |camping_car| %>
+  <div class="col mb-4">
+    <div class="camping-card card h-100">
+      <div class="view overlay">
+        <%= cl_image_tag camping_car.photo.key, height: 300, width: 345, crop: :fill %>
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title"><%= camping_car.brand %></h4>
+        <h2 class="campingcar-title" ><%= camping_car.title %></h2>
+        <p class="card-text"><%= camping_car.sleeps_capacity%> couchages</p>
+        <p class="card-price">A partir de <%= camping_car.price_per_day%>€ par jour</p>
+        <%= link_to("En savoir plus",camping_car_path(camping_car), class:"demande-reservation-button btn btn-light-blue btn-md")  %>
+
+      </div>
+    </div>
+  </div>
+    <% end %>
+</div>
