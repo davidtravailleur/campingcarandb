@@ -36,11 +36,8 @@
 <% @camping_cars.each do |camping_car| %>
   <div class="col mb-4">
     <div class="camping-card card h-100">
-      <div class="view overlay">
-        <%= cl_image_tag camping_car.photo.key, height: 300, width: 345, crop: :fill %>
-        <a href="#!">
+      <div class="view overlay" style = "background-image: url('<%= cl_image_path camping_car.photo.key, height: 300, width: 345, crop: :fill %>')">
           <div class="mask rgba-white-slight"></div>
-        </a>
       </div>
       <div class="card-body">
         <h4 class="card-title"><%= camping_car.brand %></h4>
