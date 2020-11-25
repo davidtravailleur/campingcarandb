@@ -6,7 +6,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 220px 0;
 }
 
 .banner h1 {
@@ -15,6 +15,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  padding-bottom: 20px;
 }
 
 .banner p {
@@ -22,9 +23,10 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  padding-bottom: 20px;
 }
 
-.btn-flat {
+.home-page .btn-flat {
   color: white;
   padding: 6px 10px;
   border-radius: 4px;
@@ -33,32 +35,38 @@
   transition: background 0.3s ease;
 }
 
-.btn-flat:hover {
-  background: $myrtle-green;
+.home-page .btn-flat:hover {
+  text-color: #f9f6f7;
+  transform: scale(1.1);
   color: white;
 }
 
-.separator {
-  height: 100px;
-  width: 100%;
-  background-color: #F1F4F7;
+// .separator {
+//   height: 80px;
+//   width: 100%;
+//   background-color: #F1F4F7;
+// }
+
+.home-page .container {
+  margin-bottom: 100px;
+  margin-top: 60px;
 }
 
-.text-separator {
+.home-page .text-separator {
   text-align: center;
   padding: 30px;
   color: #404b55;
   font-weight: 300px;
+  margin-bottom: 50px;
 }
 
-.cards {
+.home-page .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin: 0 20px;
+  grid-gap: 90px;
 }
 
-.card-category {
+.home-page .card-category {
   background-size: cover;
   background-position: center;
   height: 180px;
@@ -71,11 +79,72 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform .5s
 }
 
-.card-category:hover {
+.home-page .card-category:hover {
+  transform: scale(1.2)
 }
 
+.home-page .container-how {
+  padding-bottom: 50px;
+  background-color: #F1F4F7;
+}
+
+.home-page .icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 0 20px;
+}
+
+.home-page .icon-category {
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page .icon-content {
+  text-align: center;
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+
+.home-page .icon {
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page .promote {
+  background-size: cover;
+  background-position: center;
+  padding: 210px 0;
+  text-align: center;
+}
+
+.home-page .promote h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.home-page .promote p {
+  padding: 20px;
+  font-size: 20px;
+  color: white;
+  opacity: .8;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

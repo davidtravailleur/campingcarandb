@@ -3,24 +3,67 @@
     <div class="container">
       <h1>Voyagez où vous souhaitez</h1>
       <p>Votre nouveau chez vous, ailleurs</p>
-      <%= link_to "En savoir plus", "#", class: "btn btn-flat" %>
+      <%= link_to "En savoir plus", camping_cars_path, class: "btn btn-flat" %>
     </div>
   </div>
   <div class="separator"></div>
-  <div class="text-separator">
-    <h2>Location de camping-cars en France</h2>
+  <div class="container">
+    <div class="text-separator">
+      <h2>Location de camping-cars en France</h2>
+    </div>
+    <div class="cards">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "van.png" %>)">
+        Van
+      </div>
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "integral.png" %>)">
+        Intégral
+      </div>
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "profile.png" %>)">
+        Profilé
+      </div>
+    </div>
   </div>
-  <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "van.png" %>)">
-      Van
+  <div class="container-how">
+    <div class="text-separator">
+      <h2>Comment louer sur Camping Car and B ?</h2>
     </div>
-
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "integral.png" %>)">
-      Intégral
-    </div>
-
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "profile.png" %>)">
-      Profilé
-    </div>
+      <div class="icons">
+        <div class="icon-category">
+          <div class="icon">
+            <img src="https://s3.eu-central-1.amazonaws.com/campanda-content-service/images/comment-ca-marche/recherchez-votre-camping-car.png" alt="Recherchez votre camping-car !" title="Recherchez votre camping-car !">
+          </div>
+          <div class="icon-content">
+            <h2>Recherchez votre camping-car !</h2>
+            <p>Entrez la destination et les dates de votre voyage.</p>
+          </div>
+        </div>
+        <div class="icon-category">
+          <div class="icon">
+            <img src="https://s3.eu-central-1.amazonaws.com/campanda-content-service/images/comment-ca-marche/demandez-votre-camping-car.png" alt="Demandez votre camping-car !" title="Demandez votre camping-car !">
+          </div>
+          <div class="icon-content">
+            <h2>Demandez votre camping-car !</h2>
+            <p>Envoyez une demande de location au propriétaire du camping-car que vous avez choisi.</p>
+          </div>
+        </div>
+        <div class="icon-category">
+          <div class="icon">
+            <img src="https://s3.eu-central-1.amazonaws.com/campanda-content-service/images/comment-ca-marche/finalisez-votre-reservation.png" alt="Finalisez votre réservation !" title="Finalisez votre réservation !">
+          </div>
+          <div class="icon-content">
+            <h2>Finalisez votre réservation !</h2>
+            <p>Payez en ligne et partez à l'aventure !</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="promote" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "promote.png" %>);">
+      <div class="container">
+        <h1>Créez votre annonce sur Camping Car and B</h1>
+        <p>Gagnez jusqu'à <stong>15 000 €</stong> par an</p>
+        <%= link_to "S'inscrire gratuitement", new_user_registration_path, class: "btn btn-flat" %>
+      </div>
   </div>
 </div>
