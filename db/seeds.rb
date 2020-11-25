@@ -7,12 +7,12 @@
 
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "Cleaning database..."
+puts "Cleaning booking database..."
 Booking.destroy_all
 
-puts "Cleaning database..."
-CampingCar.destroy_al
-puts "Cleaning database..."
+puts "Cleaning camping car database..."
+CampingCar.destroy_all
+puts "Cleaning user database..."
 User.destroy_all
 
 
