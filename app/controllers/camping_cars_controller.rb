@@ -11,18 +11,7 @@ class CampingCarsController < ApplicationController
     @camping_car = CampingCar.find(params[:id])
   end
 
-  def new
-    @camping_car = CampingCar.new
-  end
 
-  def create
-    @camping_car = CampingCar.new(camping_car_params)
-    if @camping_car.save
-      redirect_to  owner_camping_cars_path(@camping_car)
-    else
-      render :new
-    end
-  end
 
   private
 
