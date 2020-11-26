@@ -25,6 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
+import "../plugins/flatpickr"
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
