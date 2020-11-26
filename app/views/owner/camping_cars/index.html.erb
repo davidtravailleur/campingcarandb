@@ -1,7 +1,10 @@
-<div class="owner-banner">
-  <h1>Mes annonces</h1>
+<div class="owner-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner.png" %>);">
+  <h1>MES ANNONCES</h1>
 </div>
-<div class="container">
+<div class="container ">
+  <div class="owner-backlink">
+  <%= link_to "back", profile_path %>
+  </div>
   <div class="row">
   <% @camping_cars.each do |camping_car| %>
     <div class="col-6 mt-5 mb-5">
@@ -16,13 +19,13 @@
           <div>
             <h4><%= camping_car.brand %></h4>
             <h2><%= camping_car.title %></h2>
-            <p><%= camping_car.sleeps_capacity%> couchages</p>
           </div>
           <div>
               <a href="#"><i class="far fa-edit"></i></a>
-              <a href=""><i class="fas fa-trash"></i></a>
+              <a href="#"><i class="fas fa-trash"></i></a>
           </div>
         </div>
+        <hr>
         <div class="owner-card-description">
           <p><%= camping_car.description %> </p>
         </div>
