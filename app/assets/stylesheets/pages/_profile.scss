@@ -1,0 +1,42 @@
+.profile-infos {
+  margin-top: 15px;
+  justify-content: center;
+  width: 100%;
+  display: block;
+  align-items: center;
+}
+
+.profile-picture {
+  justify-content: center;
+  display: flex;
+}
+
+.picture {
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.profile-name {
+  justify-content: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  display: flex;
+  margin-top: 10px;
+}
+
+.button-annonce {
+  margin-top: 30px;
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: solid 1px black;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.button-annonce .demande-reservation-button {
+  margin-right: 10px;
+}
+
+.text-annonces {
+  padding: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
