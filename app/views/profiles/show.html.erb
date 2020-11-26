@@ -31,10 +31,13 @@
     <div class="card-reservation">
       <% @reservations.each do |reservation| %>
         <% if reservation.status == "Pending" %>
-          <%= cl_image_tag reservation.camping_car.photo.key, height: 200, width: 200, crop: :fill, class: "photo-reservation" %>
+            <%= cl_image_tag reservation.user.avatar.key, height: 80, width: 80, crop: :fill, class: "photo-reservation" %>
           <div class="description-reservation">
-            <%= reservation.camping_car.brand %>
-            <p> Loué jusqu'au :<%= reservation.end_date %></p>
+            <h5> Bonjour, je suis intéressé pour louer votre bien du <%= reservation.start_date.strftime("%d %B %Y")  %> jusqu'au :<%= reservation.end_date.strftime("%d %B %Y")  %></h5>
+          </div>
+          <div class="buttom-reservation">
+            <%= link_to "Accepter", accept_owner_booking_path(reservation), method: :patch, class: "demande-reservation-button btn btn-light-blue btn-md" %>
+            <%= link_to "Refuser", deny_owner_booking_path(reservation), method: :patch, class: "demande-reservation-button btn btn-light-blue btn-md" %>
           </div>
           <% end %>
       <% end %>
