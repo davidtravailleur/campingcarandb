@@ -14,17 +14,14 @@
       </div>
     </div>
     <div class="card-booking-infos" >
-    <div class="datepicker">
-      <label for="start">Start date:</label>
-      <input type="date" id="start" name="trip-start"
-             value="2020-11-25"
-             min="2020-11-25" max="2021-11-25">
-      <label for="end">End date:</label>
-      <input type="date" id="end" name="trip-end"
-             value="2020-11-25"
-             min="2020-11-26" max="2021-11-26">
-    </div>
-      <%= link_to "Reservez dès maintenant", profile_path, class: "btn btn-flat" %>
+    <div class="form-date-pick">
+      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+        <%= simple_form_for [@camping_car, @booking] do |f| %>
+          <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.button :submit, "Go", class: "btn btn-flat" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

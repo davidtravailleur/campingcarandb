@@ -1,5 +1,9 @@
 class BookingsController < ApplicationController
 
+  def new
+    @booking = Booking.new
+  end
+
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
@@ -15,6 +19,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(@booking).permit(:start_date, :end_date, :camping_car_id)
+    params.require(:booking).permit(:start_date, :end_date, :camping_car_id)
   end
 end
