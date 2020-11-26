@@ -1,14 +1,22 @@
 <div class="show-campingcars">
- <div class="cards">
+ <div class="cards-show">
     <div class="card-camping-car">
-      <%= cl_image_tag @camping_car.photo.key, height: 300, crop: :fill %>
+      <%= cl_image_tag @camping_car.photo.key, width: 600, height: 400, crop: :fill %>
       <div class="card-campingcar-trip-infos">
         <h2> <%= @camping_car.title %> </h2>
         <div class="campingcars-infos">
-          <div class="campingcars-categories"> Categorie: <%= @camping_car.category %></div>
-          <div class="campingcars-categories"> Marque: <%= @camping_car.brand %></div>
-          <div class="campingcars-categories"> Couchages: <%= @camping_car.sleeps_capacity %></div>
-          <div class="campingcars-categories"> Lieu: <%= @camping_car.location %></div>
+          <div class="campingcars-label">
+            <ul>
+              <li class="campingcars-categories"><i class="fas fa-caravan"></i> <%= @camping_car.category %></li>
+              <li class="campingcars-categories"><i class="fas fa-tags"></i> <%= @camping_car.brand %></li>
+              </ul>
+          </div>
+          <div class="campingcars-label">
+            <ul>
+              <li class="campingcars-categories"><i class="fas fa-bed"></i> <%= @camping_car.sleeps_capacity %></li>
+              <li class="campingcars-categories"><i class="fas fa-map-marked-alt"></i> <%= @camping_car.location %></li>
+            </ul>
+          </div>
         </div>
         <p> <%= @camping_car.description %> </p>
       </div>

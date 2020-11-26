@@ -19,3 +19,29 @@
   color: white;
   padding-top: 40px;
 }
+
+.simple_form div.input {
+    color: white;
+}
+
+.submit-btn-owner {
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: solid 1px;
+  background: none;
+  transition: background 0.3s ease;
+}
+
+.submit-btn-owner:hover {
+  background: #32746D;
+}
+
+.upload-btn-owner {
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: solid 1px;
+  background:  #32746D;
+  transition: background 0.3s ease;
+}
