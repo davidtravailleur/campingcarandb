@@ -1,11 +1,8 @@
 <div class="index-jumbo jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
-</div>
-
-<section class="search-container">
+  <div class="container-jumbotron-from">
+    <h1 class="display-4">Votre futur Camping Car</h1>
+    <h2>L'aventure commence ici....</h2>
+    <section class="search-container">
     <div class="form-container">
         <form action="/camping_cars" method="get" novalidate="novalidate">
             <div class="row">
@@ -37,22 +34,33 @@
         </form>
     </div>
 </section>
+  </div>
+</div>
 
-<div class="card-container row row-cols-1 row-cols-md-4">
-<% @camping_cars.each do |camping_car| %>
-  <div class="display-card col mb-4 col-xl-4">
-    <div class="camping-card card h-100">
-      <div class="view overlay" style = "background-image: url('<%= cl_image_path camping_car.photo.key, height: 300, width: 345, crop: :fill %>')">
+
+
+<div class="index-container">
+  <div class="card-container row row-cols-1 row-cols-md-4">
+  <% @camping_cars.each do |camping_car| %>
+    <div class="display-card col mb-4 col-xl-6">
+      <div class="camping-card card h-100">
+        <div class="view overlay" style = "background-image: url('<%= cl_image_path camping_car.photo.key, height: 300, width: 345, crop: :fill %>')">
           <div class="mask rgba-white-slight"></div>
-      </div>
-      <div class="card-body">
-        <h4 class="card-title"><%= camping_car.title %></h4>
-        <p class="card-text"><%= camping_car.sleeps_capacity%> couchages</p>
-        <p class="card-price">A partir de <%= camping_car.price_per_day%>€ par jour</p>
-        <%= link_to("En savoir plus",camping_car_path(camping_car), class:"demande-reservation-button btn btn-light-blue btn-md")  %>
-
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><%= camping_car.title %></h4>
+          <p class="card-text"><i class="fas fa-bed card-icone-bed"></i><%= camping_car.sleeps_capacity%></p>
+          <p class="card-price"><i class="fas fa-euro-sign card-icone-price"></i></i>A partir de <%= camping_car.price_per_day%>€ par jour</p>
+          <%= link_to("Details",camping_car_path(camping_car), class:"demande-reservation-button btn btn-light-blue btn-md")  %>
+        </div>
       </div>
     </div>
-  </div>
     <% end %>
+  </div>
+
+  <div id="map"
+    style="height: 100vh;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>

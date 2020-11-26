@@ -1,22 +1,62 @@
 .card-container{
+  width:60vw;
   margin-right: 10px;
   margin-left: 10px;
+  border-radius: 5px;
 }
 
 .demande-reservation-button{
   background-color: #32746D;
   color: white;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 .camping-card{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
 }
 
 .overlay{
   height: 300px;
   background-size :cover;
   background-position: center;
-}
-.display-card{
 
+}
+#map{
+height: 100vh;
+position: sticky;
+top: 0;
+width: 40vw;
+border-radius: 8px;
+}
+
+.index-container{
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-body{
+  border-top: 1px solid black;
+  position: relative;
+  .demande-reservation-button{
+    position: absolute;
+    right:    0;
+    bottom:   0;
+    margin: 5px;
+  }
+}
+
+.card-icone-bed{
+  padding-right: 10px;
+}
+
+.card-icone-price{
+  padding-right: 19px;
+}
+
+.display-card {
+  height: 370px;
+}
+
+.card-price {
+  padding-bottom: 15px;
 }
