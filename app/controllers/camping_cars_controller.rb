@@ -3,7 +3,6 @@ class CampingCarsController < ApplicationController
   def index
     @camping_cars = CampingCar.all
     if params[:city]
-      # @camping_cars = @camping_cars.select { |camping_car| camping_car.start_with?(params[:city])}
       @camping_cars = CampingCar.where("location ILIKE ?", "%#{params[:city]}%")
     end
   end
