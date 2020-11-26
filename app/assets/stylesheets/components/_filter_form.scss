@@ -2,7 +2,6 @@
 .search-container{
   padding: 2rem;
   margin-bottom: 50px;
-  margin-top: 50px;
 }
 .search-slt{
   display: block;
@@ -14,7 +13,7 @@
   background-image: none;
   border: 1px solid #ccc;
   height: calc(3rem + 2px) !important;
-  border-radius:50px;
+  border-radius:10px;
   margin-right: 10px !important;
 }
 .wrn-btn{
@@ -27,17 +26,17 @@
 .searchformbutton{
   background-color: $cambridge-blue;
   margin-left: 10px;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 @media (min-width: 992px){
   .search-container{
       top: -114px;
-      background:  $midnight-green;
+      background:  #0a7acd;
   }
 }
 
 @media (max-width: 992px){
   .search-container{
-      background: $midnight-green;
+      background: #0a7acd;
   }
 }
