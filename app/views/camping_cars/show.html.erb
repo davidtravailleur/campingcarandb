@@ -2,7 +2,7 @@
  <div class="cards">
     <div class="card-camping-car">
       <%= cl_image_tag @camping_car.photo.key, height: 300, crop: :fill %>
-      <div class="ard-campingcar-trip-infos">
+      <div class="card-campingcar-trip-infos">
         <h2> <%= @camping_car.title %> </h2>
         <div class="campingcars-infos">
           <div class="campingcars-categories"> Categorie: <%= @camping_car.category %></div>
@@ -14,6 +14,7 @@
       </div>
     </div>
     <div class="card-booking-infos" >
+    <div class="datepicker">
       <label for="start">Start date:</label>
       <input type="date" id="start" name="trip-start"
              value="2020-11-25"
@@ -22,6 +23,9 @@
       <input type="date" id="end" name="trip-end"
              value="2020-11-25"
              min="2020-11-26" max="2021-11-26">
+    </div>
+      <%= link_to "Reservez dès maintenant", #camping_car_bookings_path,
+       class: "btn btn-flat" %>
     </div>
   </div>
 </div>
