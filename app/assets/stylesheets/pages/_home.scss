@@ -13,13 +13,13 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 60px;
   font-weight: bold;
   padding-bottom: 20px;
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 25px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -28,10 +28,12 @@
 
 .home-page .btn-flat {
   color: white;
-  padding: 6px 10px;
+  padding: 10px 15px;
   border-radius: 4px;
   border: solid 1px;
   background: none;
+  font-size: 15px;
+  opacity: .9;
   transition: background 0.3s ease;
 }
 

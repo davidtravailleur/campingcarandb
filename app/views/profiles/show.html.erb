@@ -13,12 +13,31 @@
       <%= link_to "Créer une annonce", new_owner_camping_car_path, class: "demande-reservation-button btn btn-light-blue btn-md" %>
     </div>
   </div>
-  <h3 class="text-annonces">Mes réservations :</h3>
-  <div class="container-cards">
-    <div class="card-rent">
+    <h3 class="text-annonces">Mes locations:</h3>
+    <div class="container-cards-location">
+      <div class="location-card">
+        <% @bookings.each do |booking| %>
+            <%= cl_image_tag booking.camping_car.photo.key, height: 200, width: 200, crop: :fill, class: "photo-reservation" %>
+            <div class="description-reservation">
+              <h4> <%= booking.camping_car.brand %> </h4>
+              <%= booking.total_price %>
+              <p> Loué du <%= booking.start_date %> jusqu'au : <%= booking.end_date %></p>
+            </div>
+        <% end %>
+      </div>
     </div>
-    <div class="card-to-rent">
-
+  <div class="container-cards-reservation">
+    <h3 class="text-annonces">Mes demandes de réservations:</h3>
+    <div class="card-reservation">
+      <% @reservations.each do |reservation| %>
+        <% if reservation.status == "Pending" %>
+          <%= cl_image_tag reservation.camping_car.photo.key, height: 200, width: 200, crop: :fill, class: "photo-reservation" %>
+          <div class="description-reservation">
+            <%= reservation.camping_car.brand %>
+            <p> Loué jusqu'au :<%= reservation.end_date %></p>
+          </div>
+          <% end %>
+      <% end %>
     </div>
   </div>
 </div>
