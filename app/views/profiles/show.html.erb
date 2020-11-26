@@ -1,0 +1,12 @@
+<div class="profile-page">
+  <div class="profile-infos">
+    <div class="profile-picture">
+      <%= cl_image_tag current_user.avatar.key, height: 200, width: 200, crop: :fill, class: "picture" %>
+    </div>
+    <div class="profile-name">
+      <h1 class="name"> <%= current_user.first_name %> <%= current_user.last_name %> </h1>
+    </div>
+  </div>
+</div>
+
+
