@@ -42,19 +42,19 @@ puts 'Finished!'
 
 puts 'Creating camping_cars...'
 
-camping_car_california = CampingCar.new(user: jessepinkman, title: "Volkswagen California - Van aménagé ", category: "Van", description: "Ce van aménagé peut emmener jusqu'à 4 personnes en voyage, il est donc idéal pour les excursions en famille. La climatisation rend les trajets plus agréables lorsque les températures sont élevées. Parmi les autres équipements, on compte une boîte automatique, 4 roues motrices et un auvent.
+camping_car_california = CampingCar.new(user: jessepinkman, title: "Volkswagen California ", category: "Van", description: "Ce van aménagé peut emmener jusqu'à 4 personnes en voyage, il est donc idéal pour les excursions en famille. La climatisation rend les trajets plus agréables lorsque les températures sont élevées. Parmi les autres équipements, on compte une boîte automatique, 4 roues motrices et un auvent.
 Le véhicule dispose de 4 couchages : deux places dans le toit et 2 autres places à l'arrière grâce à la transformation de la banquette en lit.
 Un évier, une gazinière 2 feux et un réfrigérateur se tiennent à disposition pour cuisiner. Un set de couverts est également disponible. La douche extérieure permet aux voyageurs de se rafraîchir.", brand: "Volkswagen", sleeps_capacity: "4 couchettes", price_per_day: 59, location: "44860 Saint-Aignan-Grandlieu")
 file = File.open(Rails.root.join('db/seeds/images/camping_cars/California.jpg'))
 camping_car_california.photo.attach(io: file, filename: 'California.jpg', content_type: 'image/jpg')
 camping_car_california.save!
 
-camping_car_rapido = CampingCar.new(user: davidtravailleur, title: "Rapido 9095DF - Grand Campingcar", category: "Intégral", description: "4 couchages et 2 places carte grise", brand: "Rapido", sleeps_capacity: "4 couchettes", price_per_day: 99, location: "36100 Issoudun")
+camping_car_rapido = CampingCar.new(user: davidtravailleur, title: "Rapido 9095DF ", category: "Intégral", description: "4 couchages et 2 places carte grise", brand: "Rapido", sleeps_capacity: "4 couchettes", price_per_day: 99, location: "36100 Issoudun")
 file = File.open(Rails.root.join('db/seeds/images/camping_cars/Rapido.jpg'))
 camping_car_rapido.photo.attach(io: file, filename: 'Rapido.jpg', content_type: 'image/jpg')
 camping_car_rapido.save!
 
-camping_car_fleetwood = CampingCar.new(user: jessepinkman, title: "Camping-car Intégral - Fleetwood Bounder", category: "Intégral", description: "4 couchages et 3 places
+camping_car_fleetwood = CampingCar.new(user: jessepinkman, title: " Fleetwood Bounder", category: "Intégral", description: "4 couchages et 3 places
 Bonjour à tous, alors envie d'escapade à petit budget avec un véhicule a bas prix ? alors Je suis là 'coucou', je suis un Fleetwood Bounder , avec direction assistée, GPS camping-car, etc ...
 Idéal en famille ou entre amies car chacun a son coin à soi.
 Je suis très bien dans le désert et très pratique pour la cuisine.", brand: "Fleetwood Bounder", sleeps_capacity: "4 couchettes", price_per_day: 50, location: "87105 Albuquerque ")
@@ -90,7 +90,7 @@ file = File.open(Rails.root.join('db/seeds/images/camping_cars/Benimar.jpg'))
 camping_car_benimar.photo.attach(io: file, filename: 'Benimar.jpg', content_type: 'image/jpg')
 camping_car_benimar.save!
 
-camping_car_itineo = CampingCar.new(user: jessepinkman, title: "Itinéo SB740 neuf de mars 2019 !", category: "Integral", description: "Bonjour, nous proposons notre magnifique Itinéo SB740 de mars 2019 à la location, pour vos loisirs en famille ou entre amis. Il dispose de 5 places assises carte grise et 7 couchages (dont 2 en option) : Au niveau des couchages: - un lit 'sur pavillon' pour 2 personnes (140x190cm) - deux lits 'superposés' dans la partie arrière (81x217cm) -
+camping_car_itineo = CampingCar.new(user: jessepinkman, title: "Itinéo SB740 ", category: "Integral", description: "Bonjour, nous proposons notre magnifique Itinéo SB740 de mars 2019 à la location, pour vos loisirs en famille ou entre amis. Il dispose de 5 places assises carte grise et 7 couchages (dont 2 en option) : Au niveau des couchages: - un lit 'sur pavillon' pour 2 personnes (140x190cm) - deux lits 'superposés' dans la partie arrière (81x217cm) -
 un lit 'sur dinette' transformable également dans la partie arrière (52x200cm) - un lit 'sur dinette' transformable pour 2 personnes dans le salon (130x200cm) (en option) Il possède sur l'arrière une chambre composée de 2 lits superposés ainsi que 2 sièges avec petite table transformable en 3ème lit ainsi que 2 penderies. Le grand plus de ce camping-car est la séparation entre la douche et le coin WC.
 Autre plus, un grand espace de vie clair et spacieux avec ses banquettes très confortables ainsi qu'une belle cuisine équipée d'un grand réfrigérateur de 150L, réchaud 3 feux très agréable pour préparer des bons petits plats en totale autonomie. Il est équipé : - d'un porte 4 vélos - d'un panneau solaire 120W - d'un réservoir d'eau propre de 140l dont 20l uniquement pour prendre la route ce qui permet d'alléger la charge utile en respectant les 3.5T maxi -
 d'un réservoir d'eau sale 120l - de moustiquaires sur toutes les fenêtres de la cellule avec stores occultant pour la nuit - d'un autoradio CD - téléphone bluetooth - d'une caméra de recul sur écran central - climatisation cabine - dispositif anti-démarrage - fermeture cabine centralisée - prise 220 volts - option GPS Garmin Camper 780 spécial camping-car moyennant 3€ par jour de location. À votre disposition : - vaisselle et ustensiles de cuisine - table et chaises de camping pour manger à l'extérieur sous le store -
@@ -99,13 +99,13 @@ file = File.open(Rails.root.join('db/seeds/images/camping_cars/Itineo.jpg'))
 camping_car_itineo.photo.attach(io: file, filename: 'Itineo.jpg', content_type: 'image/jpg')
 camping_car_itineo.save!
 
-camping_car_ducato = CampingCar.new(user: davidtravailleur, title: "Ducato proche de la mer et de Brest", category: "Profilé", description: "Fiat Ducato camping-car très bien équipé, parfait pour des vacances en famille ou entre amis. 4 places assises et 5 couchettes.
+camping_car_ducato = CampingCar.new(user: davidtravailleur, title: "Ducato proche de la mer", category: "Profilé", description: "Fiat Ducato camping-car très bien équipé, parfait pour des vacances en famille ou entre amis. 4 places assises et 5 couchettes.
 Les animaux sont autorisées.", brand: "Ducato", sleeps_capacity: "5 couchettes", price_per_day: "85€", location: "29830 Saint-Pabu")
 file = File.open(Rails.root.join('db/seeds/images/camping_cars/Ducato.jpg'))
 camping_car_ducato.photo.attach(io: file, filename: 'Ducato.jpg', content_type: 'image/jpg')
 camping_car_ducato.save!
 
-camping_car_volkswagen = CampingCar.new(user: davidtravailleur, title: "Volkswagen California - Van aménagé pour 4 avec store", category: "Van", description: "Ce van aménagé peut emmener jusqu'à 4 personnes en voyage, il est donc idéal pour les excursions en famille. La climatisation rend les trajets plus agréables lorsque les températures sont élevées. Parmi les autres équipements, on compte une boîte automatique, 4 roues motrices et un auvent.
+camping_car_volkswagen = CampingCar.new(user: davidtravailleur, title: "Volkswagen California", category: "Van", description: "Ce van aménagé peut emmener jusqu'à 4 personnes en voyage, il est donc idéal pour les excursions en famille. La climatisation rend les trajets plus agréables lorsque les températures sont élevées. Parmi les autres équipements, on compte une boîte automatique, 4 roues motrices et un auvent.
 Le véhicule dispose de 4 couchages : deux places dans le toit et 2 autres places à l'arrière grâce à la transformation de la banquette en lit.
 Un évier, une gazinière 2 feux et un réfrigérateur se tiennent à disposition pour cuisiner. Un set de couverts est également disponible. La douche extérieure permet aux voyageurs de se rafraîchir.", brand: "Volkswagen", sleeps_capacity: "4 couchettes", price_per_day: "59€", location: "33145 Saint-Jacques-de-la-Lande")
 file = File.open(Rails.root.join('db/seeds/images/camping_cars/Volkswagen California 2.jpg'))
