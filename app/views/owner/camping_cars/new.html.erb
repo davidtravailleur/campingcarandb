@@ -1,37 +1,40 @@
-<div class="container">
-  <h1 class="mt-5">Créer une annonce</h1>
+<div class="background-form-owner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "van-banner-annonce.jpg" %>);">
+  <div class="container">
+    <%= link_to "back", camping_cars_path %>
+    <h1 class="h1-owner-form">Créer une annonce</h1>
 
-  <%= simple_form_for [:owner, @camping_car] do |f| %>
-    <div class="row">
-      <div class="col-6">
-        <%= f.input :title %>
-      </div>
-      <div class="col-sm-6">
-        <%= f.input :category %>
-      </div>
-      <div class="col-sm-6">
-        <%= f.input :brand %>
-      </div>
-      <div class="col-sm-6">
-        <%= f.input :sleeps_capacity %>
-      </div>
-      <div class="col-sm-6">
-        <%= f.input :description %>
-      </div>
-      <div class="col-sm-6">
-        <%= f.input :price_per_day %>
-      </div>
-      <div class="col-sm-6">
-        <%= f.input :location %>
-      </div>
-       <div class="col-sm-6">
-        <%= f.input :photo, as: :file%>
-      </div>
+    <%= simple_form_for [:owner, @camping_car] do |f| %>
+      <div class="row label-style">
+        <div class="col-6">
+          <%= f.input :title , :label => "Titre de l'annonce"%>
+        </div>
+        <div class="col-sm-6">
+          <%= f.input :category, :label => "Catégorie", :collection => [ "van", "profilé", "intégral" ] %>
+        </div>
+        <div class="col-sm-6">
+          <%= f.input :brand, :label => "Marque" %>
+        </div>
+        <div class="col-sm-6">
+          <%= f.input :sleeps_capacity, :label => "Nombre de couchettes" %>
+        </div>
+        <div class="col-sm-6">
+          <%= f.input :description, :label => "Description de l'annonce" %>
+        </div>
+        <div class="col-sm-6">
+          <%= f.input :price_per_day,:label => "Prix par jour" %>
+        </div>
+        <div class="col-sm-6">
+          <%= f.input :location, :label => "Lieux" %>
+        </div>
+         <div class="col-sm-6">
+          <%= f.input :photo, as: :file, :label => "Télécharger votre photo" %>
+        </div>
 
-    </div>
-      <%= f.submit "Poster mon annonce", class: "btn btn-primary" %>
+      </div>
+        <%= f.submit "Poster mon annonce", class: "btn btn-primary" %>
 
 
-  <% end %>
+    <% end %>
 
+  </div>
 </div>

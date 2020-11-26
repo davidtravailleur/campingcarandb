@@ -1,8 +1,6 @@
 .owner-banner {
-  // background-size: cover;
-  background-color: $cambridge-blue;
   background-position: center;
-  height: 180px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,12 +14,21 @@
 .owner-banner h1 {
   text-align: center;
   margin-top: 30px;
+  font-size: 60px;
+}
+
+.owner-backlink a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding-top: 20px;
 }
 
 .owner-card {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
 }
 
 .owner-card > img {
@@ -31,7 +38,7 @@
 }
 
 .owner-card h2 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
 }
@@ -41,10 +48,21 @@
   color: $midnight-green;
 }
 .owner-card p {
-  font-size: 16px;
+  font-size: 20px;
   opacity: .7;
   margin: 0;
   max-height: 200px;
+}
+
+.owner-card-infos h4 {
+  font-size: 18px;
+}
+
+.owner-card-infos h3 {
+  font-size: 20px;
+}
+.owner-card-infos i {
+  font-size : 30px;
 }
 
 .owner-card .owner-card-infos {
