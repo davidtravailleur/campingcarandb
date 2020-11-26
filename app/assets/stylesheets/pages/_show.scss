@@ -67,15 +67,29 @@
       border-radius: 5px;
       margin: 30px 60px 45px 85px;
       border: 5px black !important;
+    }
 
-      .card-booking-infos .btn-flat {
-        color: white;
-        padding: 6px 10px;
-        border-radius: 4px;
-        border: solid 1px;
-        background: none;
-        transition: background 0.3s ease;
-      }
+    .card-booking-infos .btn-flat {
+      color: white;
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: solid 1px;
+      background: #9EC5AB;
+      transition: background 0.3s ease;
+    }
+
+    .card-booking-infos .btn-flat:hover {
+      background: #8daf99;
+      color: white;
+    }
+
+    .card-booking-infos .datepicker {
+      display: flex;
+      // justify-content: space-between;
+      // align-items: flex-end;
+      position: relative;
+      // object-fit: contain;
+      // overflow: auto;
     }
   }
 }
