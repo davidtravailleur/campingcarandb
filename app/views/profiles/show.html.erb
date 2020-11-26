@@ -7,6 +7,20 @@
       <h1 class="name"> <%= current_user.first_name %> <%= current_user.last_name %> </h1>
     </div>
   </div>
+  <div class="container-annonces">
+    <div class="button-annonce">
+      <%= link_to "Gérer mes annonces", owner_camping_cars_path, class: "demande-reservation-button btn btn-light-blue btn-md" %>
+      <%= link_to "Créer une annonce", new_owner_camping_car_path, class: "demande-reservation-button btn btn-light-blue btn-md" %>
+    </div>
+  </div>
+  <h3 class="text-annonces">Mes réservations :</h3>
+  <div class="container-cards">
+    <div class="card-rent">
+    </div>
+    <div class="card-to-rent">
+
+    </div>
+  </div>
 </div>
 
 
