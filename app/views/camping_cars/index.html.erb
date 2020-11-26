@@ -1,4 +1,4 @@
-<div class="index-jumbo jumbotron jumbotron-fluid">
+<div class="index-jumbo jumbotron jumbotron-fluid" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner.png" %>);">
   <div class="container-jumbotron-from">
     <h1 class="display-4">Votre futur Camping Car</h1>
     <h2>L'aventure commence ici....</h2>
@@ -18,7 +18,7 @@
                             <input type="date" label="Date de départ" class="form-control search-slt" placeholder="Enter Drop City">
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-12 p-0">
-                            <select class="form-control search-slt" id="exampleFormControlSelect1">
+                            <select name="category" class="form-control search-slt" id="exampleFormControlSelect1">
                                 <option>Catégorie</option>
                                 <option>Van</option>
                                 <option>Intégral</option>
@@ -26,7 +26,7 @@
                             </select>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-12 p-0">
-                            <button type="submit" class="searchformbutton btn btn-success wrn-btn">Search</button>
+                            <button type="submit" class="searchformbutton btn btn-success wrn-btn">Rechercher</button>
                         </div>
                     </div>
                 </div>

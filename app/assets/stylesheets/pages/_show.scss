@@ -1,6 +1,6 @@
 .show-campingcars {
 
-  .cards {
+  .cards-show {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 16px;
@@ -13,7 +13,7 @@
       background: white;
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
       margin: 30px 60px 45px 85px;
-     border-radius: 5px;
+      border-radius: 10px;
     }
 
     .card-camping-car > img {
@@ -27,9 +27,9 @@
 
     .card-camping-car h2 {
       width: 100%;
-      font-size: 16px;
+      font-size: 35px;
       font-weight: bold;
-      padding: 1em;
+      padding: 20px;
       text-align: center;
       border-bottom: 1px solid black;
     }
@@ -52,11 +52,21 @@
       // overflow: auto;
     }
 
-    .card-camping-car .campingcars-infos {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 10px;
-      font-size: 14px;
+    .campingcars-infos {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+        li {
+          list-style: none;
+          font-size: 18px;
+        }
+        .fas {
+          color: #9EC5AB;
+        }
+    }
+
+    .campingcars-label {
+
     }
 
     .card-booking-infos {
@@ -83,7 +93,7 @@
       color: white;
     }
 
-    .card-booking-infos .datepicker {
+    .card-booking-infos .form-date-pick {
       display: flex;
       // justify-content: space-between;
       // align-items: flex-end;
