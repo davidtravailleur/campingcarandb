@@ -1,3 +1,4 @@
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -134,8 +135,8 @@ puts 'Finished!'
 
 
 
-Booking.create!(camping_car: camping_car_fleetwood, user: walterwhite, start_date: "2020-12-14", end_date: "2021-01-04", total_price: 1000, status: "Pending" )
-Booking.create!(camping_car: camping_car_ducato, user: pierregroleau, start_date: "2021-02-16", end_date: "2021-02-23", total_price: 665, status: "Pending" )
-Booking.create!(camping_car: camping_car_benimar, user: pierregroleau, start_date: "2021-04-18", end_date: "2021-04-24", total_price: 665, status: "Refused" )
-Booking.create!(camping_car: camping_car_autostar, user: yanntarot, start_date: "2021-01-17", end_date: "2021-01-23", total_price: 980, status: "Approuved" )
-Booking.create!(camping_car: camping_car_volkcalifornia, user: yanntarot, start_date: "2020-12-12", end_date: "2020-12-19", total_price: 446, status: "Approuved" )
+Booking.create!(camping_car: camping_car_fleetwood, user_id: walterwhite.id, start_date: "2020-12-14", end_date: "2021-01-04", total_price: 1000, status: "Pending" )
+Booking.create!(camping_car: camping_car_ducato, user_id: pierregroleau.id, start_date: "2021-02-16", end_date: "2021-02-23", total_price: 665, status: "Pending" )
+Booking.create!(camping_car: camping_car_benimar, user_id: pierregroleau.id, start_date: "2021-04-18", end_date: "2021-04-24", total_price: 665, status: "Refused" )
+Booking.create!(camping_car: camping_car_autostar, user_id: yanntarot.id, start_date: "2021-01-17", end_date: "2021-01-23", total_price: 980, status: "Approuved" )
+Booking.create!(camping_car: camping_car_volkcalifornia, user_id: yanntarot.id, start_date: "2020-12-12", end_date: "2020-12-19", total_price: 446, status: "Approuved" )
