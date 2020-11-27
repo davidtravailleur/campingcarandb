@@ -1,6 +1,8 @@
 import flatpickr from "flatpickr";
 
-flatpickr(".datepicker", {
+export const initFlatpickr = () => {
+  flatpickr(".datepicker", {
     minDate: "today",
     maxDate: new Date().fp_incr(365) // 14 days from now
   });
+};
