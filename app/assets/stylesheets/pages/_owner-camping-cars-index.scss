@@ -1,3 +1,7 @@
+.main-owner {
+  background-color: #9EC5AB;
+}
+
 .owner-banner {
   background-position: center;
   height: 200px;
@@ -10,21 +14,39 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-.owner-banner h1 {
   text-align: center;
+}
+
+.owner-banner h1 {
   margin-top: 30px;
   font-size: 60px;
 }
 
-.owner-backlink a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  padding-top: 20px;
+
+.owner-backlink {
+    color: black;
+    font-size: 18px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: solid 1px;
+    background: none;
+    width: 70px;
+    margin-top: 15px;
 }
 
+.owner-backlink a {
+   text-decoration: none;
+}
+
+.owner-all-cards {
+  margin-right: 100px;
+  margin-left: 100px;
+  justify-content: center;
+}
+
+
 .owner-card {
+  width: 80%;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);

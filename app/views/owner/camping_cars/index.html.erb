@@ -1,40 +1,41 @@
-<div class="owner-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner.png" %>);">
-  <h1>MES ANNONCES</h1>
-</div>
-<div class="container ">
-  <div class="owner-backlink">
-  <%= link_to "back", profile_path %>
+<div class="main-owner">
+  <div class="owner-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner.png" %>);">
+    <h1>MES ANNONCES</h1>
   </div>
-  <div class="row">
-  <% @camping_cars.each do |camping_car| %>
-    <div class="col-6 mt-5 mb-5">
-      <div class="owner-card">
-          <% if camping_car.photo.present? %>
-            <%= cl_image_tag camping_car.photo.key, height: 300, width: 345, crop: :fill %>
-          <% else %>
-            <%= image_tag 'placeholder.png', height: 300, width: 345 %>
-          <% end %>
+  <div class="owner-all-cards">
+    <div class="owner-backlink">
+      <%= link_to "back", profile_path %>
+    </div>
+    <div class="row">
+    <% @camping_cars.each do |camping_car| %>
+      <div class="col-6 mt-5 mb-5">
+        <div class="owner-card">
+            <% if camping_car.photo.present? %>
+              <%= cl_image_tag camping_car.photo.key, height: 300, width: 345, crop: :fill %>
+            <% else %>
+              <%= image_tag 'placeholder.png', height: 300, width: 345 %>
+            <% end %>
 
-        <div class="owner-card-infos">
-          <div>
-            <h4><%= camping_car.brand %></h4>
-            <h2><%= camping_car.title %></h2>
+          <div class="owner-card-infos">
+            <div>
+              <h4><%= camping_car.brand %></h4>
+              <h2><%= camping_car.title %></h2>
+            </div>
+            <div>
+                <a href="#"><i class="far fa-edit"></i></a>
+                <a href="#"><i class="fas fa-trash"></i></a>
+            </div>
           </div>
-          <div>
-              <a href="#"><i class="far fa-edit"></i></a>
-              <a href="#"><i class="fas fa-trash"></i></a>
+          <hr>
+          <div class="owner-card-description">
+            <p><%= camping_car.description %> </p>
           </div>
-        </div>
-        <hr>
-        <div class="owner-card-description">
-          <p><%= camping_car.description %> </p>
-        </div>
-        <div class="owner-card-price">
-          <p><%= camping_car.price_per_day%>€/jour</p>
+          <div class="owner-card-price">
+            <p><%= camping_car.price_per_day%>€/jour</p>
+          </div>
         </div>
       </div>
+        <% end %>
     </div>
-      <% end %>
   </div>
-
 </div>
