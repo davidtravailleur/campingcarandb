@@ -1,4 +1,4 @@
-<div class="show-campingcars">
+<div class="show-campingcars" data-price="<%= @camping_car.price_per_day %>" >
    <div class="cards-show">
       <div class="card-camping-car">
         <%= cl_image_tag @camping_car.photo.key, width: 600, height: 400, crop: :fill %>
@@ -25,13 +25,16 @@
           <%= link_to "<< Retour aux véhicules", camping_cars_path %>
         </div>
       </div>
-      <div class="container position-sticky card-booking-infos" id="card-booking-infos-sticky" style="width: 300px; position: sticky;" >
+      <div class="container card-booking-infos" id="card-booking-infos-sticky" style="width: 300px; position: sticky;" >
         <div class="form-date-pick">
           <div class="mx-auto form-wrapper" style="width: 90%; margin: 10 auto;">
             <%= simple_form_for [@camping_car, @booking] do |f| %>
               <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
               <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-              <%= f.button :submit, "Go", class: "btn btn-flat btn-block" %>
+                <div class="price">
+                <p class="display-price"></p>
+                </div>
+              <%= f.button :submit, "Réservez Maintenant", class: "btn btn-flat btn-block" %>
             <% end %>
           </div>
         </div>
