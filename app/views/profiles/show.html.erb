@@ -14,7 +14,7 @@
 
 <div class="container pics">
 	<div class="title">
-		<h3>Mon historique</h3>
+		<h3 class="text-annonces">Mon historique</h3>
 	</div>
     <% @bookings.each do |booking| %>
 	<div class="container">
@@ -27,6 +27,7 @@
           <h4 class="card-title"></h4><%= booking.camping_car.title %></h4>
           <p class="card-text"><p> Loué du <%= booking.start_date %> jusqu'au : <%= booking.end_date %></p></p>
           <p class="card-text"><%= booking.total_price %>€</p>
+          <p class="card-text"><%= booking.status %></p>
           <p></p>
         </div>
       </div>
