@@ -18,8 +18,8 @@ User.destroy_all
 
 
 walterwhite = User.new(first_name: "Walter", last_name: "White", email: "walter.white@gmail.com", password: "methmaker")
-file = File.open(Rails.root.join('db/seeds/images/users/walterwhite.png'))
-walterwhite.avatar.attach(io: file, filename: 'walterwhite.png', content_type: 'image/png')
+file = File.open(Rails.root.join('db/seeds/images/users/walterwhite.jpg'))
+walterwhite.avatar.attach(io: file, filename: 'walterwhite.jpg', content_type: 'image/jpg')
 walterwhite.save!
 yanntarot = User.new(first_name: "Yann", last_name: "Tarot", email: "yann.tarot@gmail.com", password: "codeislife")
 file = File.open(Rails.root.join('db/seeds/images/users/yanntarot.jpg'))
@@ -34,8 +34,8 @@ file = File.open(Rails.root.join('db/seeds/images/users/davidtravailleur.jpg'))
 davidtravailleur.avatar.attach(io: file, filename: 'davidtravailleur.jpg', content_type: 'image/jpg')
 davidtravailleur.save!
 jessepinkman = User.new(first_name: "Jessy", last_name: "Pinkman", email: "jessebitch@gmail.com", password: "cooklover")
-file = File.open(Rails.root.join('db/seeds/images/users/jessepinkman.png'))
-jessepinkman.avatar.attach(io: file, filename: 'jessepinkman.png', content_type: 'image/png')
+file = File.open(Rails.root.join('db/seeds/images/users/jessepinkman.jpg'))
+jessepinkman.avatar.attach(io: file, filename: 'jessepinkman.jpg', content_type: 'image/jpg')
 jessepinkman.save!
 
 puts 'Finished!'
