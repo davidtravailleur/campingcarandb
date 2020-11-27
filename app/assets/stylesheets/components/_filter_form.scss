@@ -25,10 +25,16 @@
   border-radius:0;
 }
 .searchformbutton{
-  background-color: $cambridge-blue;
-  margin-left: 10px;
+  background-color: #68c1f2;
+  margin-left: 5px;
   border-radius: 10px;
   font-size: 20px;
   font-weight: bold;
-  color: rgb(40, 40, 117);
+  color: white;
+  text-shadow: black;
+
+}
+.form-input-index{
+  margin-right: 5px;
+  font-weight: 20px;
 }

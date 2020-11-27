@@ -1,2 +1,7 @@
-<h2><%= camping_car.title %></h2>
-<p><%= camping_car.location %></p>
+<div class="pop-up card-product">
+  <%= cl_image_tag camping_car.photo.key, height: 100, width: 210, crop: :fill %>
+  <div class="card-product-infos">
+    <h2><%= camping_car.brand %></h2>
+    <p><%= camping_car.location %></p>
+  </div>
+</div>
