@@ -54,10 +54,10 @@ file = File.open(Rails.root.join('db/seeds/images/camping_cars/Rapido.jpg'))
 camping_car_rapido.photo.attach(io: file, filename: 'Rapido.jpg', content_type: 'image/jpg')
 camping_car_rapido.save!
 
-camping_car_fleetwood = CampingCar.new(user: jessepinkman, title: " Fleetwood Bounder", category: "Intégral", description: "4 couchages et 3 places
-Bonjour à tous, alors envie d'escapade à petit budget avec un véhicule a bas prix ? alors Je suis là 'coucou', je suis un Fleetwood Bounder , avec direction assistée, GPS camping-car, etc ...
-Idéal en famille ou entre amies car chacun a son coin à soi.
-Je suis très bien dans le désert et très pratique pour la cuisine.", brand: "Fleetwood Bounder", sleeps_capacity: "4 couchettes", price_per_day: 50, location: "87105 Albuquerque ")
+camping_car_fleetwood = CampingCar.new(user: jessepinkman, title: " Fleetwood Bounder", category: "Intégral", description: "Aussi appelé 'The Krystal Ship', ce camping-car dispose d'une cuisine entièrement équipé. Nous proposons également l'option laboratoire de chimie sur demande.
+Quelques impacts de balles sont à déplorer mais l'isolation est encore bonne. Vous pouvez le récupérer dans le désert d'Albuquerque.
+Attention : Il ne convient pas à une utilisation familial !
+ps: Nous déclinons toutes responsabilités en cas de contrôle de police ou DEA", brand: "Fleetwood Bounder", sleeps_capacity: "4 couchettes", price_per_day: 50, location: "87105 Albuquerque ")
 file = File.open(Rails.root.join('db/seeds/images/camping_cars/Fleetwood.jpg'))
 camping_car_fleetwood.photo.attach(io: file, filename: 'Fleetwood.jpg', content_type: 'image/jpg')
 camping_car_fleetwood.save!
@@ -135,8 +135,8 @@ puts 'Finished!'
 
 
 
-Booking.create!(camping_car: camping_car_fleetwood, user_id: walterwhite.id, start_date: "2020-12-14", end_date: "2021-01-04", total_price: 1000, status: "Pending" )
-Booking.create!(camping_car: camping_car_ducato, user_id: pierregroleau.id, start_date: "2021-02-16", end_date: "2021-02-23", total_price: 665, status: "Pending" )
-Booking.create!(camping_car: camping_car_benimar, user_id: pierregroleau.id, start_date: "2021-04-18", end_date: "2021-04-24", total_price: 665, status: "Refused" )
-Booking.create!(camping_car: camping_car_autostar, user_id: yanntarot.id, start_date: "2021-01-17", end_date: "2021-01-23", total_price: 980, status: "Approuved" )
-Booking.create!(camping_car: camping_car_volkcalifornia, user_id: yanntarot.id, start_date: "2020-12-12", end_date: "2020-12-19", total_price: 446, status: "Approuved" )
+Booking.create!(camping_car: camping_car_fleetwood, user_id: walterwhite.id, start_date: "2020-12-14", end_date: "2021-01-04", total_price: 1000, status: "pending" )
+Booking.create!(camping_car: camping_car_ducato, user_id: pierregroleau.id, start_date: "2021-02-16", end_date: "2021-02-23", total_price: 665, status: "pending" )
+Booking.create!(camping_car: camping_car_benimar, user_id: pierregroleau.id, start_date: "2021-04-18", end_date: "2021-04-24", total_price: 665, status: "refused" )
+Booking.create!(camping_car: camping_car_autostar, user_id: yanntarot.id, start_date: "2021-01-17", end_date: "2021-01-23", total_price: 980, status: "approuved" )
+Booking.create!(camping_car: camping_car_volkcalifornia, user_id: yanntarot.id, start_date: "2020-12-12", end_date: "2020-12-19", total_price: 446, status: "approuved" )

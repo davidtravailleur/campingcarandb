@@ -21,7 +21,7 @@
     <div class="card-group vgr-cards">
       <div class="card">
         <div class="card-img-body">
-          <%= cl_image_tag booking.camping_car.photo.key, height: 200, width: 200, crop: :fill, class: "card-img" %>
+          <%= cl_image_tag booking.camping_car.photo.key, height: 300, width: 300, crop: :fill, class: "card-img" %>
         </div>
         <div class="card-body">
           <h4 class="card-title"></h4><%= booking.camping_car.title %></h4>
@@ -36,17 +36,33 @@
 </div>
 
   <div class="container-cards-reservation">
-    <h3 class="text-annonces">Mes demandes de réservations:</h3>
+    <h3 class="text-annonces">Mes demandes de réservations</h3>
     <div class="card-reservation">
       <% @reservations.each do |reservation| %>
-        <% if reservation.status == "Pending" %>
+        <% if reservation.status == "pending" %>
             <%= cl_image_tag reservation.user.avatar.key, height: 80, width: 80, crop: :fill, class: "photo-reservation" %>
           <div class="description-reservation">
-            <h5> Bonjour, je suis intéressé pour louer votre bien du <%= reservation.start_date.strftime("%d %B %Y") %> jusqu'au :<%= reservation.end_date.strftime("%d %B %Y") %></h5>
+            <h5> Bonjour, <%= reservation.user.first_name %> aimerait louer votre camping car <%= reservation.camping_car.brand %> du <%= reservation.start_date.strftime("%d %B %Y") %> jusqu'au <%= reservation.end_date.strftime("%d %B %Y") %></h5>
           </div>
           <div class="buttom-reservation">
             <%= link_to "Accepter", accept_owner_booking_path(reservation), method: :patch, class: "demande-reservation-button btn btn-light-blue btn-md" %>
             <%= link_to "Refuser", deny_owner_booking_path(reservation), method: :patch, class: "demande-reservation-button btn btn-light-blue btn-md" %>
+          </div>
+          <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="container-cards-reservation">
+    <h3 class="text-annonces">Mes réservations à venir</h3>
+    <div class="card-reservation">
+      <% @reservations.each do |reservation| %>
+        <% if reservation.status == "approuved" %>
+            <%= cl_image_tag reservation.user.avatar.key, height: 80, width: 80, crop: :fill, class: "photo-reservation" %>
+          <div class="description-reservation">
+            <h5> <%=  reservation.user.first_name %> loue votre camping car <%= reservation.camping_car.brand %> du <%= reservation.start_date.strftime("%d %B %Y") %> jusqu'au <%= reservation.end_date.strftime("%d %B %Y") %></h5>
+          </div>
+          <div class="buttom-reservation">
+            <h5> Total : <%= reservation.total_price %> €  </h5>
           </div>
           <% end %>
       <% end %>
