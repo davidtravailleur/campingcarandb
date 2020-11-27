@@ -1,24 +1,41 @@
 <div class="show-campingcars">
- <div class="cards-show">
-    <div class="card-camping-car">
-      <%= cl_image_tag @camping_car.photo.key, width: 600, height: 400, crop: :fill %>
-      <div class="card-campingcar-trip-infos">
-        <h2> <%= @camping_car.title %> </h2>
-        <div class="campingcars-infos">
-          <div class="campingcars-label">
-            <ul>
-              <li class="campingcars-categories"><i class="fas fa-caravan"></i> <%= @camping_car.category %></li>
-              <li class="campingcars-categories"><i class="fas fa-tags"></i> <%= @camping_car.brand %></li>
+   <div class="cards-show">
+      <div class="card-camping-car">
+        <%= cl_image_tag @camping_car.photo.key, width: 600, height: 400, crop: :fill %>
+        <div class="card-campingcar-trip-infos">
+            <h2> <%= @camping_car.title %> </h2>
+          <hr>
+          <div class="campingcars-infos">
+            <div class="campingcars-label">
+              <ul>
+                <li class="campingcars-categories"><i class="fas fa-caravan"></i> <%= @camping_car.category %></li>
+                <li class="campingcars-categories"><i class="fas fa-tags"></i> <%= @camping_car.brand %></li>
+                </ul>
+            </div>
+            <div class="campingcars-label">
+              <ul>
+                <li class="campingcars-categories"><i class="fas fa-bed"></i> <%= @camping_car.sleeps_capacity %></li>
+                <li class="campingcars-categories"><i class="fas fa-map-marked-alt"></i> <%= @camping_car.location %></li>
               </ul>
+            </div>
           </div>
-          <div class="campingcars-label">
-            <ul>
-              <li class="campingcars-categories"><i class="fas fa-bed"></i> <%= @camping_car.sleeps_capacity %></li>
-              <li class="campingcars-categories"><i class="fas fa-map-marked-alt"></i> <%= @camping_car.location %></li>
-            </ul>
+          <hr>
+          <h3>Ce véhicule pour <strong> <%= @camping_car.price_per_day %>€</strong> par jour.</h3>
+          <p> <%= @camping_car.description %> </p>
+          <%= link_to "<< Retour aux véhicules", camping_cars_path %>
+        </div>
+      </div>
+
+      <div class="card-booking-infos" >
+        <div class="form-date-pick">
+          <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+            <%= simple_form_for [@camping_car, @booking] do |f| %>
+              <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+              <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+              <%= f.button :submit, "Go", class: "btn btn-flat" %>
+            <% end %>
           </div>
         </div>
-        <p> <%= @camping_car.description %> </p>
       </div>
     </div>
     <div class="card-booking-infos" >
