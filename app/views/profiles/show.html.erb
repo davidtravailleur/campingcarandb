@@ -1,31 +1,37 @@
-<div class="profile-page">
-  <div class="profile-infos">
-    <div class="profile-picture">
-      <%= cl_image_tag current_user.avatar.key, height: 200, width: 200, crop: :fill, class: "picture" %>
-    </div>
-    <div class="profile-name">
-      <h1 class="name"> <%= current_user.first_name %> <%= current_user.last_name %> </h1>
-    </div>
-  </div>
-  <div class="container-annonces">
-    <div class="button-annonce">
+<main>
+	<div class="jumbo"></div>
+	<div class="container icons">
+		<%= cl_image_tag current_user.avatar.key, height: 200, width: 200, crop: :pad, class: "big-icon" %>
+	</div>
+	<div class="details">
+		<h3><%= current_user.first_name %> <%= current_user.last_name %></h3>
+	</div>
+	<div class="button-annonce">
       <%= link_to "Gérer mes annonces", owner_camping_cars_path, class: "demande-reservation-button btn btn-light-blue btn-md" %>
       <%= link_to "Créer une annonce", new_owner_camping_car_path, class: "demande-reservation-button btn btn-light-blue btn-md" %>
     </div>
   </div>
-    <h3 class="text-annonces">Mes locations:</h3>
-    <div class="container-cards-location">
-      <div class="location-card">
-        <% @bookings.each do |booking| %>
-            <%= cl_image_tag booking.camping_car.photo.key, height: 200, width: 200, crop: :fill, class: "photo-reservation" %>
-            <div class="description-reservation">
-              <h4> <%= booking.camping_car.brand %> </h4>
-              <%= booking.total_price %>
-              <p> Loué du <%= booking.start_date %> jusqu'au : <%= booking.end_date %></p>
-            </div>
-        <% end %>
+
+<div class="container pics">
+	<div class="title">
+		<h3>Mon historique</h3>
+	</div>
+    <% @bookings.each do |booking| %>
+	<div class="container">
+    <div class="card-group vgr-cards">
+      <div class="card">
+        <div class="card-img-body">
+          <%= cl_image_tag booking.camping_car.photo.key, height: 200, width: 200, crop: :fill, class: "card-img" %>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"></h4><%= booking.camping_car.title %></h4>
+          <p class="card-text"><p> Loué du <%= booking.start_date %> jusqu'au : <%= booking.end_date %></p></p>
+          <p class="card-text"><%= booking.total_price %>€</p>
+          <p></p>
+        </div>
       </div>
     </div>
+
   <div class="container-cards-reservation">
     <h3 class="text-annonces">Mes demandes de réservations:</h3>
     <div class="card-reservation">
@@ -42,7 +48,7 @@
           <% end %>
       <% end %>
     </div>
+
   </div>
+  <% end %>
 </div>
-
-

@@ -1,71 +1,177 @@
-.profile-infos {
-  margin-top: 15px;
-  justify-content: center;
-  width: 100%;
-  display: block;
-  align-items: center;
-}
+header {
 
-.profile-picture {
-  justify-content: center;
+	nav {
+		position: fixed;
+		z-index: 1000;
+		background: #2196F3;
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			li {
+
+				a {
+					line-height: 1;
+				}
+
+				&:hover {
+					background: transparent;
+				}
+			}
+
+			#title {
+				font-size: 22px;
+				font-weight: 300;
+			}
+
+		}
+	}
+}
+.details{
   display: flex;
-}
-
-.picture {
-  border-radius: 50%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.profile-name {
   justify-content: center;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  display: flex;
-  margin-top: 10px;
+  padding: 20px;
 }
 
-.button-annonce {
-  margin-top: 30px;
+.button-annonce{
   display: flex;
-  padding-bottom: 10px;
-  border-bottom: solid 1px black;
-  margin-right: 20px;
-  margin-left: 20px;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+.container.pics{
+  margin-top: 40px;
+  .title{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 32px;
+  }
 }
 
-.button-annonce .demande-reservation-button {
-  margin-right: 10px;
+.demande-reservation-button{
+  margin-right: 25px;
 }
 
 .text-annonces {
   color: #404b55;
   padding: 20px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
 }
+main {
+	padding-top: 64px;
+	padding-bottom: 300px;
 
-// .container-cards-location {
-//   display: flex;
-// }
+	.jumbo {
+		width: 100%;
+		height: 400px;
+		background: url(https://images.pexels.com/photos/210010/pexels-photo-210010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center center no-repeat;
+		background-size: cover;
+	}
 
-// .location-card {
-//   overflow: hidden;
-//   background: white;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-//   border-radius: 10px;
-// }
+	.icons {
+		display: flex;
+		justify-content: center;
 
-// .location-card > img {
-//   height: auto;
-//   width: 100%;
-//   object-fit: cover;
-// }
+		.big-icon {
+			width: 180px;
+			height: 180px;
+			background-size: 140%;
+			border-radius: 50%;
+			border: 2px solid white;
+      margin-top: -90px;
+		}
+	}
 
-// .location-card h2 {
-//   font-size: 22px;
-//   font-weight: bold;
-//   margin: 0;
-// }
+  .card {
+    border: none;
+  }
+  .card-img {
+    border-radius: 0;
+  }
+
+  .vgr-cards {
+    height: 210px;
+    .card {
+      display: flex;
+      flex-flow: wrap;
+      flex: 100%;
+      margin-bottom: 40px;
+
+      &:nth-child(even) .card-img-body {
+        order: 2;
+      }
 
 
+      &:nth-child(even) .card-body {
+        padding-left: 0;
+        padding-right: 1.25rem;
+      }
+
+      @media (max-width: 576px) {
+        display: block;
+      }
+
+    }
+
+    .card-img-body {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+
+      @media (max-width: 576px) {
+        width: 100%;
+        height: 200px;
+            margin-bottom: 20px;
+      }
+
+    }
+
+    .card-img {
+      object-fit: cover;
+      width: 300px;
+      height: 200px;
+      position: absolute;
+      margin-left: 50%;
+      transform: translateX(-50%);
+
+      @media (max-width: 1140px) {
+            margin: 0;
+      transform: none;
+      width: 100%;
+      height: auto;
+      }
+
+    }
+
+    .card-body {
+      flex: 2;
+      padding: 0 0 0 1.25rem;
+
+      @media (max-width: 576px) {
+        padding: 0;
+      }
+
+    }
+  }
+
+
+
+@media screen and (max-width: 600px) {
+
+	main {
+		padding-top: 40px;
+	}
+
+	.jumbo {
+		height: 200px !important;
+	}
+
+	.icons {
+		justify-content: center !important;
+	}
+}
 
 .card-reservation {
   display: flex;
