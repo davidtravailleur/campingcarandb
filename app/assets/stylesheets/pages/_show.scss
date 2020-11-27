@@ -1,9 +1,28 @@
 .show-campingcars {
 
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background: #32746D;
+  }
+
+  a:hover {
+    background: #9EC5AB;
+  }
+
   .cards-show {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 16px;
+    background-image: asset-url('show-background.jpg');
+    background-position: center 60%;
+    background-repeat:no-repeat;
+    object-fit: cover;
 
 
     .card-camping-car {
@@ -29,36 +48,40 @@
       width: 100%;
       font-size: 35px;
       font-weight: bold;
-      padding: 20px;
+      padding-top: 20px;
+      padding-bottom: 5px;
       text-align: center;
-      border-bottom: 1px solid black;
     }
+
 
     .card-camping-car p {
-      font-size: 12px;
-      opacity: .7;
+      font-size: 18px;
       padding: 1em;
       text-align: justify;
+      overflow: auto;
     }
 
 
-    .card-camping-car .card-campingcar-trip-infos {
+
+    .card-campingcar-trip-infos {
       padding: 16px;
-      // display: flex;
-      // justify-content: space-between;
-      // align-items: flex-end;
-      // position: relative;
-      // object-fit: contain;
-      // overflow: auto;
     }
+
+    .card-campingcar-trip-infos h3 {
+      text-align: justify;
+      padding-left: 1em;
+      font-size: 20px;
+    }
+
 
     .campingcars-infos {
       width: 100%;
       display: flex;
       justify-content: space-around;
+      padding-top: 14px;
         li {
           list-style: none;
-          font-size: 18px;
+          font-size: 25px;
         }
         .fas {
           color: #9EC5AB;
@@ -66,7 +89,7 @@
     }
 
     .campingcars-label {
-
+      width: auto;
     }
 
     .card-booking-infos {
