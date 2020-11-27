@@ -38,13 +38,13 @@
         </div>
       </div>
     </div>
-    <div class="card-booking-infos" >
+    <div class="container position-sticky card-booking-infos" id="card-booking-infos-sticky" style="width: 300px; position: sticky;" >
     <div class="form-date-pick">
-      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+      <div class="mx-auto form-wrapper" style="width: 90%; margin: 10 auto;">
         <%= simple_form_for [@camping_car, @booking] do |f| %>
           <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
           <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-          <%= f.button :submit, "Go", class: "btn btn-flat" %>
+          <%= f.button :submit, "Go", class: "btn btn-flat btn-block" %>
         <% end %>
       </div>
     </div>

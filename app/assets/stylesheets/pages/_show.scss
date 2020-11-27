@@ -93,13 +93,18 @@
     }
 
     .card-booking-infos {
-      height: 90%;
+      height: 50%;
       overflow: hidden;
       background: white;
+      position: sticky !important;
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
       border-radius: 5px;
       margin: 30px 60px 45px 85px;
       border: 5px black !important;
+    }
+
+    #card-booking-infos-sticky {
+      position: sticky;
     }
 
     .card-booking-infos .btn-flat {
@@ -119,7 +124,7 @@
     .card-booking-infos .form-date-pick {
       display: flex;
       // justify-content: space-between;
-      // align-items: flex-end;
+      align-items: flex-end;
       position: relative;
       // object-fit: contain;
       // overflow: auto;
