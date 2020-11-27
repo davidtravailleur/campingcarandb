@@ -48,8 +48,16 @@ header {
     font-size: 32px;
   }
 }
+
 .demande-reservation-button{
   margin-right: 25px;
+}
+
+.text-annonces {
+  color: #404b55;
+  padding: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
 }
 main {
 	padding-top: 64px;
@@ -94,6 +102,7 @@ main {
       &:nth-child(even) .card-img-body {
         order: 2;
       }
+
 
       &:nth-child(even) .card-body {
         padding-left: 0;
@@ -163,4 +172,28 @@ main {
 		justify-content: center !important;
 	}
 }
+
+.card-reservation {
+  display: flex;
+}
+
+.photo-reservation {
+  margin-left: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.description-reservation {
+  margin-top: 10px;
+  margin-left: 100px;
+  padding: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  color: #404b55;
+}
+
+.buttom-reservation {
+  margin-top: 10px;
+  margin-left: 100px;
+  padding: 15px;
 }
